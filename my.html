@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestJsonGS</title>
+</head>
+<body>
+    <div id="app">[.....]</div>
+    <button id="btn">Fetch data</button>
+</body>
+
+<style>
+
+    body {
+        background-color: red;
+    }
+
+    .app {
+        background-color: aqua;
+        color: blue;
+    }
+
+</style>
+
+<script>
+
+    const btn = document.getElementById("btn");
+    const ebtn = btn.addEventListener("click", testGS);
+
+    const app = document.getElementById("app");
+
+    function testGS() {
+
+        // let url = "https://script.googleusercontent.com/macros/echo?user_content_key=34FTw0i-lEPdNZPRgX5fb73zq79DxVLods2gQJnP8u6IRpDg8-Pw7irJT51RsyLME2c4sJAi06wjt-lXVQMJ2WLcx98c2POVm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnDT5CoSrDOpup8uR_fce76mfB6Iqa5dYzx4dsLzjHGLcZJ7JbozsiRVajHVt5-w5DpbL9bwhhwg3GuoxnFc3yuKVlqow3mmNog&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX";
+        // url = "https://script.googleusercontent.com/macros/echo?user_content_key=5hjQf5l8qzN-qZEwnQNeO3a-WLrMyJ8FI-V1g7b1-YsbgMAdyrqk97Lx2D_vhl8lQkjSkDnLEWDtE7VQaYQKEIPlreNaPLm7m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCH6HXHZg-BOtjtsLo0GifbDtCw8sFUaKeorYLcB9uhoNEIZwKwx4g8fdKWITTvkTeFfXN8hkIFCDliH9471TGUAWoxIqAkL3g&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX";
+        // url = "https://api.github.com/search/repositories?sort=stars&q=Apps%20Script%20stars%3E=100";
+        // url = "https://script.googleusercontent.com/macros/echo?user_content_key=2A_aMjYmp2ucsBosLR2sKrmj9WCvnYhAAe2y3e3FC7bbiwYlRRGZtff6stPgSyAFhiHBDvLDPMMTLqTILOLB5JkhtPlq2YT_m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGxWjydilBeMkwZAdiP9Vez_c8LW0y_QtIUg4bEFBxBtj3XNN9_QOaX0-zYpZUKKiuLjie4FoARvCMFrQwuwS16lOz36KjlWdA&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX";
+        
+        // deployment get txt
+        // funziona con d.text()
+        // errore con d.json()
+        let url = "https://script.googleusercontent.com/macros/echo?user_content_key=4lqfXwNH-JsBRFavcfEqb2aIXm5K1aH43JnLQNfD0NinhgYvZ2EZB5e1Wo2IOKspDjOuAeUs57F8b7c5MaSDOOie_0Ir11jem5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnGxWjydilBeMkwZAdiP9Vez_c8LW0y_QtIUg4bEFBxBtj3XNN9_QOaX0-zYpZUKKiuLjie4FoARvCMFrQwuwS16lOz36KjlWdA&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX"
+
+        // deployment get json
+        // funziona con d.json()
+        // funziona con d.text()
+        url = "https://script.googleusercontent.com/macros/echo?user_content_key=JZ4cFtZd7InSTe7YsqcnFyJDaydEXA8Ckgjiiogwp0io-jRG6R-ELNzeNlnEA9pWoTESS5kZjB7iZ4MKR-7fXRbJgXaaudkOm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnCH6HXHZg-BOtjtsLo0GifbDtCw8sFUaKeorYLcB9uhoNEIZwKwx4g8fdKWITTvkTeFfXN8hkIFCDliH9471TGUAWoxIqAkL3g&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX"
+
+        // deployment get json 3
+        // funziona con d.text()
+        // funziona con d.json()
+        url = "https://script.googleusercontent.com/macros/echo?user_content_key=aa_p9zgDOuMHbugRo3Lnom5KfAaKAXr0JFF-vAzK2O1KmuyoaYTb6GxTyb0pFSbhNhOgHhfjjfrMRsKyy0xVapxfyp3KqAt9m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnJ4X3ua8WKZ53XYVI0-YNZSTopgomrvtYCUVy1ioIaA1WXyb1-E1M9oAJgy736S-DN1nAzrbqxRDJK2fv0TBK6qcf7tW_QkFFQ&lib=MHGeISk6ooH3RxnNaGUDrEdNSyhx4ziTX"
+
+        console.log(url);
+
+        // fetch(url)
+        // .then(d => d.json())
+        // .then(d =>{
+        //     console.log("step 1 - json");
+        //     console.log(d[0].status);
+        // });
+
+        fetch(url)
+        .then(d => {
+            
+            console.log("step 1");
+
+            return d.json();            
+        })
+        .then(d => {
+            console.log("step 2");
+            console.log(d[0].status);
+
+            app.textContent = d[0].status
+
+        });
+
+    }
+</script>
+
+</html>
